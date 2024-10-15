@@ -1,0 +1,60 @@
+// Plane.h
+#ifndef PLANE_H
+#define PLANE_H
+
+#include "FlightInfo.h"  // Include the struct from part 2
+
+class Plane {
+private:
+    double pos, vel, distance;
+    bool at_SCE;
+    const char* origin;
+    const char* destination;
+    FlightInfo flight;  // Using FlightInfo struct from part 2
+
+public:
+    // Constructor
+    Plane(const char* from, const char* to) : origin(from), destination(to), pos(0.0), vel(0.0), distance(0.0), at_SCE(false) {}
+
+    // Destructor
+    ~Plane() {}
+
+    // Operate function (no real functionality as per the instructions)
+    void operate(double dt) {
+        // Example: Incrementing position by velocity * dt
+        pos += vel * dt;
+    }
+
+    // Getters
+    double getPos() const { return pos; }
+    const char* getOrigin() const { return origin; }
+    const char* getDestination() const { return destination; }
+    bool isAtSCE() const { return at_SCE; }
+
+    // Get/Set functions for velocity
+    double getVel() const { return vel; }
+    void setVel(double v) { vel = v; }
+};
+
+#endif // PLANE_H
+// main.cpp
+#include <iostream>
+#include "Plane.h"  // Include the Plane class, which also includes FlightInfo.h
+
+int main() {
+    // Create an instance of the Plane class
+    Plane myPlane("SCE", "PHL");
+
+    // Set velocity
+    myPlane.setVel(500.0);  // Example velocity in miles per hour
+
+    // Call the operate function
+    myPlane.operate(0.5);  // Operate for 0.5 hours
+
+    // Print plane information
+    std::cout << "Plane from " << myPlane.getOrigin() << " to " << myPlane.getDestination() << std::endl;
+    std::cout << "Current position: " << myPlane.getPos() << " miles" << std::endl;
+    std::cout << "Current velocity: " << myPlane.getVel() << " miles per hour" << std::endl;
+
+    return 0;
+}
