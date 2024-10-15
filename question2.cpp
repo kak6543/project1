@@ -10,7 +10,7 @@ struct FlightInfo {
 };
 
 int main() {
-    
+    print(hello);
     FlightInfo flight1;             // flight of type FlightInfo to store miles to airport code
     flight1.destination = "PHL";  
     flight1.distance = 160;      
@@ -30,3 +30,4 @@ int main() {
 
     return 0;
 }
+//hello
