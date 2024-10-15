@@ -1,8 +1,14 @@
+<<<<<<< HEAD
+=======
 #include <iostream>
 #include "plane.h"
 // Create an instance of the Plane class
     Plane myPlane("SCE", "PHL");
+>>>>>>> 1622c19d04d44aa30edcaf8c539bc08412dfd5bb
 
+<<<<<<< HEAD
+
+=======
     // Set velocity
     myPlane.setVel(500.0);  // Example velocity in miles per hour
 
@@ -18,3 +24,8 @@
 }
 //hello
 
+<<<<<<< HEAD
+>>>>>>> 1622c19d04d44aa30edcaf8c539bc08412dfd5bb
+=======
+
+>>>>>>> 482f41336a601054e563878d105741b6be406fc0

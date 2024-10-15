@@ -3,7 +3,7 @@
 
 // g++ -std=c++11 -Wall -o question1 question1.cpp
 // ./question1
-
+//changed
 #define ENABLE_USER_INPUT 0                 // if 0 -> 1, user input enabled
 
 int main() {
