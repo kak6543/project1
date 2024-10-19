@@ -30,6 +30,8 @@ int main() {
 
     return 0;
 }
+//Begin Question 3 here
+
 class Plane {
 private:
     double pos;            // Position of the plane
