@@ -38,28 +38,20 @@ private:
     double vel;            // Velocity of the plane
     double distance;       // Distance covered
     bool at_SCE;          // Whether the plane is at SCE (specific control event)
-    struct FlightInfo {
-    const char* destination;  // store and reference airport codes
-    int distance;};
+    struct FlightInfo;
     std::string origin;    // Origin of the flight
     std::string destination; // Destination of the flight
 
 public:
     // Constructor
-    Plane(const std::string& from, const std::string& to)
-        : pos(0.0), vel(0.0), distance(0.0), at_SCE(false), origin(from), destination(to) {}
+    Plane(const std::string& from, const std::string& to);
+        
 
     // Destructor
-    ~Plane() {}
+    ~Plane() {};
 
     // Function to operate the plane
-    void operate(double dt) {
-        // Update position based on velocity and time
-        pos += vel * dt;
-        // Update distance
-        distance += vel * dt;
-        // Here you can add logic to update at_SCE based on conditions
-    }
+    void operate(double dt) {}
 
     // Getter for pos
     double getPos() const {
