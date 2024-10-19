@@ -30,4 +30,63 @@ int main() {
 
     return 0;
 }
+class Plane {
+private:
+    double pos;            // Position of the plane
+    double vel;            // Velocity of the plane
+    double distance;       // Distance covered
+    bool at_SCE;          // Whether the plane is at SCE (specific control event)
+    struct FlightInfo {
+    const char* destination;  // store and reference airport codes
+    int distance;};
+    std::string origin;    // Origin of the flight
+    std::string destination; // Destination of the flight
+
+public:
+    // Constructor
+    Plane(const std::string& from, const std::string& to)
+        : pos(0.0), vel(0.0), distance(0.0), at_SCE(false), origin(from), destination(to) {}
+
+    // Destructor
+    ~Plane() {}
+
+    // Function to operate the plane
+    void operate(double dt) {
+        // Update position based on velocity and time
+        pos += vel * dt;
+        // Update distance
+        distance += vel * dt;
+        // Here you can add logic to update at_SCE based on conditions
+    }
+
+    // Getter for pos
+    double getPos() const {
+        return pos;
+    }
+
+    // Getter for origin
+    std::string getOrigin() const {
+        return origin;
+    }
+
+    // Getter for destination
+    std::string getDestination() const {
+        return destination;
+    }
+
+    // Getter for at_SCE
+    bool isAtSCE() const {
+        return at_SCE;
+    }
+
+    // Getter for vel
+    double getVel() const {
+        return vel;
+    }
+
+    // Setter for vel
+    void setVel(double newVel) {
+        vel = newVel;
+    }
+};
 
