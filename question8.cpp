@@ -113,7 +113,6 @@ int main() {
             pilot1->switchControl(plane);
         }
 
-        std::cout << "-----------------------------------\n";
     }
 
     return 0;
