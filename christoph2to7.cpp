@@ -157,7 +157,7 @@ int main() {
         plane.setVel(450);
         
         std::cout << "Starting simulation for destination: " << flights[i].destination << std::endl;
-        plane.operate(10, 1500, pilot.getname());  // 50 s timestep, 1500 max iterations
+        plane.operate(50, 1500, pilot.getname());  // 50 s timestep, 1500 max iterations
 
         Pilot newPilot("Pilot " + std::to_string(i + 2));  // Create a new pilot
         newPilot.switchControl(&plane);
