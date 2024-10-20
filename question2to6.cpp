@@ -11,14 +11,14 @@ struct FlightInfo {
 // class Plane
 class Plane {
 private:
-    double pos;               // Position of the plane
-    double vel;               // Velocity of the plane
-    double distance;          // Distance to the destination
-    bool at_SCE;              // Whether the plane is at SCE (specific control event)
-    std::string origin;       // Origin of the flight
-    std::string destination;  // Destination of the flight
+    double pos;               // position 
+    double vel;               // velocity
+    double distance;          // distance to destination
+    bool at_SCE;              // whether the plane is at SCE 
+    std::string origin;       // origin of the flight
+    std::string destination;  // destination of the flight
 
-    // Helper function to find the distance based on the destination
+    // function to find the distance based on the destination
     int findDistance(const std::string& dest, FlightInfo flights[], int flightCount) {
         for (int i = 0; i < flightCount; ++i) {
             if (dest == flights[i].destination) {
@@ -124,9 +124,9 @@ public:
 
 int main() {
     // Define flight information
-    FlightInfo flight1 = {"PHL", 160};  // Flight to PHL (Philadelphia)
-    FlightInfo flight2 = {"ORD", 640};  // Flight to ORD (Chicago O'Hare)
-    FlightInfo flight3 = {"EWR", 220};  // Flight to EWR (Newark)
+    FlightInfo flight1 = {"PHL", 160};  // flight to PHL 
+    FlightInfo flight2 = {"ORD", 640};  // flight to ORD 
+    FlightInfo flight3 = {"EWR", 220};  // flight to EWR 
 
     // store all flights in array
     FlightInfo flights[] = {flight1, flight2, flight3};
@@ -143,7 +143,7 @@ int main() {
         // Instantiate a Plane object for each flight
         Plane plane("SCE", flights[i].destination, flights, flightCount);
 
-        // Set the velocity of the plane (for example, 450 mph)
+        // set the velocity of the plane
         plane.setVel(450);
         
         std::cout << "Starting simulation for destination: " << flights[i].destination << std::endl;
