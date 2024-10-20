@@ -54,7 +54,7 @@ private:
     std::string name;
 
 public:
-    std::shared_ptr<Plane> myplane;  // Modern pointer to a plane (shared ownership)
+    std::shared_ptr<Plane> myplane;  // pointer to a plane (shared ownership)
 
     // constructor
     Pilot(const std::string& pilotname) : name(pilotname) {
