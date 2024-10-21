@@ -58,7 +58,7 @@ public:
 
     // constructor
     Pilot(const std::string& pilotname) : name(pilotname) {
-        std::cout << "Pilot " << name << " at memory: " << this << " is at the gate, ready to board the plane.\n";
+        std::cout << name << " at memory: " << this << " is at the gate, ready to board the plane.\n";
     }
 
     // function to switch control of the plane
@@ -95,7 +95,7 @@ int main() {
     for (int i = 0; i < flightCount; ++i) {
         // plane object for each flight (using shared_ptr)
         auto plane = std::make_shared<Plane>("SCE", flights[i].destination, flights, flightCount);
-        plane->setVel(450);  // Set velocity of the plane
+        plane->setVel(450);  
 
         // initial control of the plane to pilot1
         pilot1->switchControl(plane);
