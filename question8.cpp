@@ -79,7 +79,7 @@ int main() {
 
     // store all flights in array
     FlightInfo flights[] = {flight1, flight2, flight3};
-    int flightCount = sizeof(flights) / sizeof(flights[0]);  // Number of flights
+    int flightCount = sizeof(flights) / sizeof(flights[0]); 
 
     // flight distances from SCE
     std::cout << "Flight distances from SCE:\n";
