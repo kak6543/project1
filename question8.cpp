@@ -72,7 +72,7 @@ public:
 
 // main function
 int main() {
-    // Define flight information
+    
     FlightInfo flight1 = {"PHL", 160};  // flight to PHL
     FlightInfo flight2 = {"ORD", 640};  // flight to ORD
     FlightInfo flight3 = {"EWR", 220};  // flight to EWR
