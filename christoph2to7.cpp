@@ -1,13 +1,13 @@
 #include <iostream>
 #include <string>
-
+// Question 2 container ------------------------------------------
 // flight info
 struct FlightInfo {
     const char* destination;  // store and reference airport codes
     int distance;             // miles to destination
 };
 
-
+// Question 3 ------------------------------------------------------
 // class Plane
 class Plane {
 private:
@@ -30,6 +30,7 @@ private:
 
 public:
     // constructor
+    // Qiestion 4 -----------------------------------------------------------------------
     Plane(const std::string& from, const std::string& to, FlightInfo flights[], int flightCount)
         : pos(0.0), vel(0.0), at_SCE(true), origin(from), destination(to) {
         distance = findDistance(to, flights, flightCount);
