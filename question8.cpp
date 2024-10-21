@@ -88,8 +88,8 @@ int main() {
     }
 
     // create two pilots using shared_ptr
-    auto pilot1 = std::make_shared<Pilot>("Alpha");
-    auto pilot2 = std::make_shared<Pilot>("Bravo");
+    auto pilot1 = std::make_shared<Pilot>("Pilot 1");
+    auto pilot2 = std::make_shared<Pilot>("Pilot 2");
 
     // iterate over each flight 
     for (int i = 0; i < flightCount; ++i) {
